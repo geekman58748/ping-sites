@@ -1,0 +1,11 @@
+services:
+  - type: web
+    name: pinger
+    env: node
+    buildCommand: npm install
+    startCommand: node index.js
+    envVars:
+      - key: LIST_OF_URLS
+        value: https://rwas-interoperability.onrender.com
+      - key: INTERVAL_SECONDS
+        value: "240"
